@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>餐廳搜尋結果</title>
+  </head>
+  <body>
+    <h1>餐廳搜尋結果</h1>
+    {% if restaurants %}
+      <p>以下是符合條件的餐廳：</p>
+      <ul>
+        {% for restaurant in restaurants %}
+          <li>{{ restaurant }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>很抱歉，沒有符合條件的餐廳。</p>
+    {% endif %}
+  </body>
+</html>
